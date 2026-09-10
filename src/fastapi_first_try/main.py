@@ -9,3 +9,7 @@ def read_root():
 @app.get('/test')
 def read_test():
     return 'Some test GET route'
+
+@app.get('/posts/{id}')
+def read_post(id: int):
+    return 'Post ' + str(id)
