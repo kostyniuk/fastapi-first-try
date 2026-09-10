@@ -10,6 +10,6 @@ def read_root():
 def read_test():
     return 'Some test GET route'
 
-@app.get('/posts/{id}')
-def read_post(id: int):
-    return 'Post ' + str(id)
+@app.get('/posts/{id}/info/{infoId}')
+def read_post(id: int, infoId: int):
+    return f"Post {id}, info {infoId}"
