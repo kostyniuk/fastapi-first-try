@@ -11,5 +11,5 @@ def read_test():
     return 'Some test GET route'
 
 @app.get('/posts/{id}/info/{infoId}')
-def read_post(id: int, infoId: int):
-    return f"Post {id}, info {infoId}"
+def read_post(id: int, infoId: int, queryA: str | None = None):
+    return f"Post {id}, info {infoId}, q: {str(queryA)}"
